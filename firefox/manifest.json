@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Moodle-RMB-Unlocker",
+    "version": "1.0",
+  
+    "description": "Free yourself while using Moodle.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["borderify.js"]
+      }
+    ]
+  
+  }
