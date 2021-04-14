@@ -10,6 +10,8 @@ function neutralizeBlockers() {
     });
 }
 
+setInterval(neutralizeBlockers, 500);
+
 
 browser.runtime.onMessage.addListener(request => {
     const action = request.action;
