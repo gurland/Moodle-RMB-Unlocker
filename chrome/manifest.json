@@ -11,9 +11,6 @@
         "scripts": ["background.js"]
     },
     "permissions": ["storage", "webRequest", "tabs"],
-    "browser_action": {
-        "default_popup": "./popup/index.html"
-    },
     "content_scripts": [
         {
             "matches": [
@@ -23,6 +20,5 @@
                 "content.js"
             ]
         }
-    ],
-    "web_accessible_resources": ["script.js"]
+    ]
 }
