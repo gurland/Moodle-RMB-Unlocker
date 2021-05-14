@@ -7,10 +7,7 @@
         "48": "icons/48.png",
         "96": "icons/96.png"
     },
-    "background": {
-        "scripts": ["background.js"]
-    },
-    "permissions": ["storage", "webRequest", "tabs"],
+    "permissions": [],
     "content_scripts": [
         {
             "matches": [
