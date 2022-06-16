@@ -2,12 +2,14 @@
   function script() {
     setInterval(() => {
       const $ = window.$;
-
-      var events = $._data(document.getElementsByTagName('body')[0], "events");
-      var maliciousEvents = [...events.keydown, ...events.contextmenu];
-      maliciousEvents.forEach(maliciousEvent => {
-        maliciousEvent.handler = $.noop;
-      }, 500);
+      
+      if ($) {
+        var events = $._data(document.getElementsByTagName('body')[0], "events");
+        var maliciousEvents = [...events.keydown, ...events.contextmenu];
+        maliciousEvents.forEach(maliciousEvent => {
+          maliciousEvent.handler = $.noop;
+        }, 500);
+      }
     })
   }
 
